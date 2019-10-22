@@ -30,7 +30,7 @@ def translate_player(response):
     return {
         "id": dig(response, "pid"),
         "draft": {
-            "starts_at": dig(response, "dgst", transformer=from_unix_milliseconds_to_datetime),
+            # "starts_at": dig(response, "dgst", transformer=from_unix_milliseconds_to_datetime),
             "draftable": dig(response, "IsDisabledFromDrafting", transformer=lambda value: value is False, fallback=False),
             "salary": dig(response, "s", transformer=float),
             "exceptional_messages": dig(response, "ExceptionalMessages"),
@@ -49,6 +49,7 @@ def translate_player(response):
             "id": dig(response, "posid"),
             "name": dig(response, "pn"),
         },
+        "status": dig(response, "i"),
         "team_id": dig(response, "tid"),
     }
 
