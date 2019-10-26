@@ -23,3 +23,39 @@ def dig(data, *key_path, transformer=identity, fallback=None):
         return transformer(nested_data)
     except KeyError:
         return fallback
+
+def translate_team(num):
+    teams = [
+        "ATL",
+        "BOS",
+        "NOP",
+        "CHI",
+        "CLE",
+        "6",
+        "7",
+        "DET",
+        "9",
+        "HOU",
+        "IND",
+        "LAC",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "NYK",
+        "ORL",
+        "PHI",
+        "PHO",
+        "22",
+        "SAC",
+        "SAS",
+        "25",
+        "UTA",
+        "WAS",
+        "TOR",
+        "29",
+        "30"
+    ]
+
+    return teams[num - 1]

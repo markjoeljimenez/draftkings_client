@@ -1,6 +1,6 @@
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
+from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime, translate_team
 from draft_kings.data import SPORT_ID_TO_SPORT, Sport
 
 """
@@ -50,7 +50,7 @@ def translate_player(response):
             "name": dig(response, "pn"),
         },
         "status": dig(response, "i"),
-        "team_id": dig(response, "tid"),
+        "team_id": translate_team(dig(response, "tid")),
     }
 
 
