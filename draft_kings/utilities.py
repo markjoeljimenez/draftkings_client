@@ -52,7 +52,7 @@ def translate_team(num):
         },
         {
             "id": 7,
-            "team": "7"
+            "team": "DEN"
         },
         {
             "id": 8,
@@ -60,7 +60,7 @@ def translate_team(num):
         },
         {
             "id": 9,
-            "team": "9"
+            "team": "GSW"
         },
         {
             "id": 10,
@@ -84,7 +84,7 @@ def translate_team(num):
         },
         {
             "id": 15,
-            "team": "15"
+            "team": "MIL"
         },
         {
             "id": 16,
@@ -124,7 +124,7 @@ def translate_team(num):
         },
         {
             "id": 25,
-            "team": "25"
+            "team": "OKC"
         },
         {
             "id": 26,
@@ -141,10 +141,6 @@ def translate_team(num):
         {
             "id": 29,
             "team": "MEM"
-        },
-        {
-            "id": 30,
-            "team": "30"
         },
         {
             "id": 5312,
