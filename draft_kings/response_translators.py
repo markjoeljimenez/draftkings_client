@@ -50,7 +50,7 @@ def translate_player(response):
             "name": dig(response, "pn"),
         },
         "status": dig(response, "i"),
-        "team": 'htabbr' if dig(response, 'tid') == dig(response, 'hid') else 'atabbr',
+        "team": dig(response, 'htabbr' if dig(response, 'tid') == dig(response, 'htid') else 'atabbr'),
     }
 
 
