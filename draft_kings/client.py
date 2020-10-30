@@ -5,6 +5,10 @@ from draft_kings.response_translators import translate_players, translate_contes
     translate_draft_group, translate_regions, translate_draftables, SPORT_TO_CONTESTS_ABBREVIATION
 
 
+def sports():
+    return requests.get(url="https://api.draftkings.com/sites/US-DK/sports/v1/sports?format=json").json()
+
+
 def contests(sport):
     response = requests.get(url=urls.CONTESTS_URL,
                             params={'sport': SPORT_TO_CONTESTS_ABBREVIATION[sport]})
