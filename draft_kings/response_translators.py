@@ -21,9 +21,11 @@ SPORT_TO_CONTESTS_ABBREVIATION = {
     Sport.LEAGUE_OF_LEGENDS: "LOL",
     Sport.GOLF: "GOLF",
     Sport.COLLEGE_BASKETBALL: "CBB"
+    Sport.CSGO: "CS:GO"
 }
 
-CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS = {v: k for k, v in SPORT_TO_CONTESTS_ABBREVIATION.items()}
+CONTEST_SPORT_ABBREVIATIONS_TO_SPORTS = {
+    v: k for k, v in SPORT_TO_CONTESTS_ABBREVIATION.items()}
 
 
 def translate_player(response):
@@ -58,7 +60,8 @@ def translate_players(response):
     return {
         "players": [translate_player(response=player) for player in response.get("playerList", [])],
         "team_series_list": [
-            translate_player_team_series_details(team_series_id=team_series_id, details=details)
+            translate_player_team_series_details(
+                team_series_id=team_series_id, details=details)
             for team_series_id, details in response.get("teamList", []).items()
         ]
     }
