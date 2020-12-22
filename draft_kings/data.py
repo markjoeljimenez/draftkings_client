@@ -17,6 +17,8 @@ class Sport(Enum):
     TENNIS = "TENNIS"
     LEAGUE_OF_LEGENDS = "LEAGUE OF LEGENDS"
     ARENA_FOOTBALL_LEAGUE = "ARENA FOOTBALL LEAGUE"
+    CSGO = "CS:GO"
+
 
 """
 https://api.draftkings.com/sites/US-DK/sports/v1/sports?format=json
@@ -37,4 +39,5 @@ SPORT_ID_TO_SPORT = {
     15: Sport.EUROLEAGUE_BASKETBALL,
     16: Sport.TENNIS,
     17: Sport.ARENA_FOOTBALL_LEAGUE,
+    19: Sport.CSGO
 }
