@@ -97,6 +97,7 @@ def translate_contest(response):
         "sport": SPORT_ID_TO_SPORT.get(dig(response, "s")),
         "starred": "IsStarred" in response.get("attr", {}),
         "starts_at": dig(response, "sd", transformer=translate_formatted_datetime),
+        "game_type": dig(response, "gameType")
     }
 
 
