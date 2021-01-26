@@ -20,7 +20,7 @@ SPORT_TO_CONTESTS_ABBREVIATION = {
     Sport.TENNIS: "TEN",
     Sport.LEAGUE_OF_LEGENDS: "LOL",
     Sport.GOLF: "GOLF",
-    Sport.COLLEGE_BASKETBALL: "CBB"
+    Sport.COLLEGE_BASKETBALL: "CBB",
     Sport.CSGO: "CS:GO"
 }
 
